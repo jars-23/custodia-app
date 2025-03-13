@@ -1,0 +1,126 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+body{
+  background: linear-gradient(135deg, #240871,#397bb1, #0b0da3) !important;
+}
+
+/*#region Style Colors*/
+
+.btnPrimary{
+  background-color: #002d7c;
+  color: #fff;
+  border: 1px solid #002d7c;
+  outline: none;
+}
+
+.btnPrimary:hover{
+  background-color: #02225a;
+  color: #fff;
+}
+
+button.btnPrimary > svg{
+color: #fff;
+}
+
+.btnSecondary{
+  background-color: #2168da;
+  color: #fff;
+  border: 1px solid #2168da;
+  outline: none;
+}
+
+.btnSecondary:hover{
+  background-color: #265fbb;
+  color: #fff;
+}
+
+button.btnSecondary > svg{
+color: #fff;
+}
+/*#endregion */
+
+/*#region Style Components*/
+
+input:focus-visible {
+  outline: none;
+  background-color: #fcfcfc;
+}
+
+.form-check-input:focus {
+  box-shadow: none !important;
+}
+
+.form-check-input{
+  border-radius: 8px !important;
+  padding: 1px;
+  cursor: pointer;
+  border-color: #ccc !important;
+}
+
+.form-check-input:checked {
+  background-color: #002d7c !important;
+  border-color: #002d7c !important;
+}
+
+button{
+  border-radius: 20px !important;
+}
+
+/*#endregion */
+
+/*#region Style LoginPage*/
+
+#login-container{
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-form{
+  border: 1px solid #e1e1e1;
+  border-radius: 14px;
+  padding: 40px;
+  background: linear-gradient(135deg, #ffffff,#fffbfb) !important;
+}
+/*#endregion */
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
