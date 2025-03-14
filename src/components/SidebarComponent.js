@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation  } from "react-router-dom";
 import "../assets/css/components/SidebarComponent.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faScrewdriverWrench, faChevronCircleDown, faChevronCircleUp, faPowerOff } from "@fortawesome/free-solid-svg-icons";
@@ -7,6 +7,7 @@ import { faHome, faScrewdriverWrench, faChevronCircleDown, faChevronCircleUp, fa
 const SidebarComponent = () => {
 
   const [open, setOpen] = useState(false); 
+  const location = useLocation();
 
   return (
     <aside className="sidebar">
@@ -15,7 +16,7 @@ const SidebarComponent = () => {
       </div>
       <ul>
         <li><h6 className="mt-2" style={{fontSize:"13px", fontWeight: "bold", color: "#babfc9", margin: "0px", paddingLeft: "11px"}}>Módulos generales</h6></li>
-        <li className="mt-2">
+        <li className={`mt-2 ${location.pathname.includes("/dashboard") ? "active" : ""}`} onClick={() => setOpen(!open)}>
           <Link to="/dashboard"> <FontAwesomeIcon className="pe-3" icon={faHome}/>Inicio</Link>
         </li>
         <li>
@@ -26,7 +27,7 @@ const SidebarComponent = () => {
           </button>
           {open && (
             <ul className="submenu">
-              <li><Link to="/groups/list">Grupos</Link></li>
+              <li className={location.pathname.includes("/groups") ? "active" : ""}><Link to="/groups">Grupos</Link></li>
               <li><Link to="/groups/add">Servicios</Link></li>
               <li><Link to="/groups/add">Tipo de ETL</Link></li>
               <li><Link to="/groups/add">Tipo de prestamos</Link></li>
