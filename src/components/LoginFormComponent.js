@@ -5,7 +5,7 @@ import RadioButtonComponent from "./RadioButtonComponent";
 import ButtonComponent from "./ButtonComponent";
 import AlertModal from "./AlertComponent";
 
-const LoginForm = ({ onLogin }) => {
+const LoginFormComponent = ({ onLogin }) => {
     const [user, setUser] = useState("");
     const [password, setPassword] = useState("");
     const [selectedValue, setSelectedValue] = useState("");
@@ -19,8 +19,7 @@ const LoginForm = ({ onLogin }) => {
         if(user === "JotaFac" && password === "123456"){
             await new Promise((resolve) => setTimeout(resolve, 3000));
             setLoading(false);
-            setAlert({ show: true, type: "success", message: "¡Las credenciales digitadas son correctas!" });
-            // onLogin();
+            onLogin();
         }else{
             await new Promise((resolve) => setTimeout(resolve, 3000));
             setLoading(false);
@@ -63,4 +62,4 @@ const LoginForm = ({ onLogin }) => {
     );
 };
 
-export default LoginForm;
+export default LoginFormComponent;

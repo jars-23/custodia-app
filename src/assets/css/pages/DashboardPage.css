@@ -1,0 +1,22 @@
+.dashboard {
+    padding: 20px;
+  }
+  
+  .cards {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .green { background: #28a745; }
+  .yellow { background: #ffc107; }
+  .red { background: #dc3545; }
+  
