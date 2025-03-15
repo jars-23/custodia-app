@@ -1,7 +1,10 @@
+import React from "react";
+import TitleComponent from "../../components/TitleComponent";
+
 export default function GroupsPage() {
     return (
-      <div>
-        <h1>Aqui van los grupos</h1>
+      <div id="admgroups">
+        <TitleComponent title={"Administración > Grupos"} subtitle={"Aquí puede crear los grupos con los que cuenta su compañía:"} ></TitleComponent>
       </div>
     );
   }
