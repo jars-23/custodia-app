@@ -1,0 +1,79 @@
+.card {
+    padding: 20px 10px;
+    border-radius: 10px;
+    color: #27374d;
+    font-size: 18px;
+    box-shadow: 3px 3px 5px -1px rgb(0 0 0 / 12%);
+    cursor: pointer;
+    background-color: #fff;
+  }
+  
+  .icon-card{
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #28a745;
+  }
+  
+  .num-card {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .text-card {
+    font-size: 15px;
+  }
+  
+  .green {
+    background-color: #cff3d7;
+    font-size: 30px;
+    color: #28a745;
+  }
+  
+  .green--modify{
+    border: none;
+    border-right: 15px solid #28a745;
+  }
+
+  .green--modify:hover {
+    background-color: #28a745;
+    color: #ffffff;
+    border-right: 15px solid #cff3d7;
+  }
+  
+  .yellow {
+    background-color: #fff3c3;
+    font-size: 30px;
+    color: #ffc107;
+  }
+  
+  .yellow--modify {
+    border: none;
+    border-right: 15px solid #ffc107;
+  }
+
+  .yellow--modify:hover {
+    background-color: #ffc107;
+    color: #ffffff;
+    border-right: 15px solid #fff3c3;
+  }
+
+  .red {
+    background-color: #f6c9cd;
+    font-size: 30px;
+    color: #dc3545;
+  }
+
+  .red--modify{
+    border: none;
+    border-right: 15px solid #dc3545;
+  }
+
+  .red--modify:hover {
+    background-color: #dc3545;
+    color: #ffffff;
+    border-right: 15px solid #f6c9cd;
+  }

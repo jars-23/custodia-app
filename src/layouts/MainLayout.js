@@ -6,9 +6,11 @@ import "../assets/css/layouts/MainLayout.css";
 const MainLayout = () => {
   return (
     <div className="layout-container">
-      <Sidebar /> {/* Menú lateral fijo */}
+      <Sidebar /> 
       <main className="layout-content">
-        <Outlet /> {/* Aquí se renderizan las páginas */}
+        <div className="viewcontainer">
+          <Outlet /> 
+        </div>
       </main>
     </div>
   );

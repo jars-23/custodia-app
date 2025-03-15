@@ -1,19 +1,21 @@
 .sidebar {
-  width: 300px;
   height: 100vh;
   background-color: #1f2937;
   color: white;
   display: flex;
   flex-direction: column;
   padding: 0px 0px 16px 0px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar .logo {
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
+  align-items: center;
+  padding: 20px 0px;
   background-color: #ffffff;
-  max-height: 160px;
+  max-height: 180px;
+  height: 180px;
   border-bottom: 5px solid #0e121a;
 }
 
@@ -23,7 +25,7 @@
 }
 
 .sidebar ul li {
-  padding: 4px 10px 4px 10px;
+  padding: 5px 10px 5px 10px;
 }
 
 .sidebar ul li a, .submenu-btn {
@@ -37,55 +39,144 @@
   border: none;
   cursor: pointer;
   font-size: 14px;
-  border-radius: 0px 5px 5px 0px  !important;
-  border-left: 2px solid transparent;
+  border-radius: 5px  !important;
+  border-left: 5px solid transparent;
 }
 
-.sidebar ul li a:hover, .sidebar ul li.active a, .submenu-btn:hover {
-  background-color: #374151;
-  border-radius: 0px 5px 5px 0px !important;
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
   color: white;
-  border-left: 2px solid #249bd9;
+  text-decoration: none;
+  position: relative;
+  border-radius: 0;
+  cursor: pointer;
 }
 
-.sidebar ul li a:hover svg, .sidebar ul li.active a svg, .submenu-btn:hover svg{
+.sidebar-item:hover{
+  background-color: #181c24; 
   color: #249bd9;
 }
 
-.sidebar ul li.active {
-  background-color: #374151;
-  color: white; 
-  font-weight: 500;
+.sidebar-item:hover a{
+  background-color: transparent;  
 }
 
-.sidebar ul li.active a {
-  color: white;
+.sidebar-item.active {
+  background-color: #0e121a;
 }
 
+.sidebar-item.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background-color: #249bd9;
+  border-radius:0 6px 6px 0;
+}
+
+.sidebar-item.active svg {
+  color: #249bd9;
+}
+.sidebar-item:hover svg {
+  color: #249bd9;
+}
+
+.sidebar-item label{
+  cursor: pointer;
+}
+
+.sidebar-btnitem{
+  cursor: pointer;
+}
+
+.sidebar-btnitem:hover{
+  background-color: #181c24; 
+  color: #249bd9;
+}
+
+.sidebar-btnitem:hover a{
+  background-color: transparent;  
+}
+
+.sidebar-btnitem.active {
+  background-color: #0e121a;
+}
+
+.sidebar-btnitem.active svg {
+  color: #249bd9;
+}
+
+.sidebar-btnitem:hover button > svg {
+  color: #249bd9;
+}
+
+.sidebar-btnitem label{
+  cursor: pointer;
+}
 /* Submenú */
 .submenu {
   list-style: none;
   margin-top: 10px;
   padding-left: 20px;
-  background-color: #465063;
+  background-color: #383f4d;
   border-radius: 4px;
 }
 
-ul.submenu li {
+.submenu-item {
   padding: 0px 10px;
+  margin: 0;
+  border-left: 4px solid transparent;
 }
 
-ul.submenu li a {
+.submenu-item--modify{
+  padding: 5px 3px !important;
+}
+
+.submenu-item:hover {
+  background-color: #181c24;
+}
+
+.submenu-item.active {
+  background-color: #181c24;
+  border-left: 4px solid #249bd9;
+}
+
+.submenu-item a {
   font-size: 14px;
   border-radius: 0px !important;
   border-left: 2px solid #1f2937;
 }
 
-ul.submenu li a svg {
-  color: rgb(31, 40, 49);
+.submenu-item a svg {
+  font-size: 14px;
+  color: white;
+}
+
+.submenu-item:hover a svg{
+  color: #249bd9;
+}
+
+.submenu-item.active a svg{
+  color: #249bd9;
 }
 
 .chevron{
   position: relative;
   left: 106px;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 5px;
+  background-color: #1f2937;
+  border: none;
+  color: #ffffff;
+  height: 30px;
+  width: 30px;
+  font-size: 15px;
+  z-index: 1000;
 }

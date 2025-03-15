@@ -32,6 +32,32 @@ body{
   background: linear-gradient(135deg, #240871,#397bb1, #0b0da3) !important;
 }
 
+.viewcontainer{
+  background: #d8d8d8 !important;
+  margin: 0px !important;
+  padding: 20px;
+  height: 100vh;
+}
+
+.primaryTitle{
+  font-size: 20px;
+  font-weight: bold;
+  color: #27374d;
+}
+
+.secondTitle{
+  font-size: 14px;
+  font-weight: 500;
+  color: #27374d;
+}
+
+
+.jumbotron{
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
 /*#region Style Colors*/
 
 .btnPrimary{
