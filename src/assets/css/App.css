@@ -51,6 +51,9 @@ body{
   color: #27374d;
 }
 
+.fa-spinner {
+  animation: fa-spin 1.5s infinite linear !important;
+}
 
 .jumbotron{
   background-color: #ffffff;

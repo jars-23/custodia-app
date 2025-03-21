@@ -12,7 +12,7 @@ const ButtonComponent = ({ label, icon, onClick, loadlabel = "Cargando...", type
       style={{ padding: "8px 16px" }}
     >
       {loading ? (
-        <FontAwesomeIcon icon={faSpinner} spin />
+        <FontAwesomeIcon icon={faSpinner} />
       ) : (
         icon && <FontAwesomeIcon icon={icon} />
       )}
